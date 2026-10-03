@@ -1,4 +1,5 @@
 {
 	"item.truerealism.ak47": "Ak-47",
-	"item.truerealism.fn_scar": "FN-SCAR"
+
+	"block.truerealism.ak47_block": "Block of AK-47"
 }

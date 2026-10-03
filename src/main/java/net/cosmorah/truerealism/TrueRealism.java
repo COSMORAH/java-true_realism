@@ -1,5 +1,6 @@
 package net.cosmorah.truerealism;
 
+import net.cosmorah.truerealism.block.ModBlocks;
 import net.cosmorah.truerealism.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -36,6 +37,7 @@ public class TrueRealism {
         NeoForge.EVENT_BUS.register(this);
 
 		ModItems.register(modEventBus); // Register the mod's custom items
+		ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -51,6 +53,9 @@ public class TrueRealism {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 		if (event.getTabKey() == CreativeModeTabs.COMBAT) {
 			event.accept(ModItems.AK47);
+		}
+		if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+			event.accept(ModBlocks.AK_47_BLOCK);
 		}
     }
 
